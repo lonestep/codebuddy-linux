@@ -4,7 +4,11 @@ const cp = require('child_process');
 const crypto = require('crypto');
 const assert = require('assert');
 
-const appRoot = '/usr/share/buddycn/resources/app';
+const appRoot =
+  process.env.CB_APP_ROOT ||
+  (fs.existsSync('/usr/share/codebuddy/resources/app')
+    ? '/usr/share/codebuddy/resources/app'
+    : '/usr/share/buddycn/resources/app');
 const nm = path.join(appRoot, 'node_modules');
 
 async function main() {
