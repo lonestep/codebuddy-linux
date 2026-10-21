@@ -1,0 +1,8 @@
+*.deb
+*.rpm
+inspect_deb/
+tmp_deb_build/
+tmp_rpm_build/
+__pycache__/
+*.pyc
+*.log
